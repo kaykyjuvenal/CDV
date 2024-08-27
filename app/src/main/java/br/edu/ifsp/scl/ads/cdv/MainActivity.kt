@@ -1,5 +1,6 @@
 package br.edu.ifsp.scl.ads.cdv
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.enableEdgeToEdge
@@ -15,6 +16,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(amb.root)
+        amb.AbraBt.setOnClickListener {
+            val anotherIntent:Intent= Intent(this@MainActivity, AnotherActivy::class.java)
+        }
         Log.v(getString(R.string.app_name),"onCreate: Iniciando ciclo completo")
     }
     override fun onStart() {
